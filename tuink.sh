@@ -1,6 +1,6 @@
 #!/bin/bash
 i=0;
-algo="";
+algo="autolykos2";
 configFile="ltyu.ini"
 > $configFile;
 while [[ "$#" -gt 0 ]]; do
@@ -11,12 +11,12 @@ while [[ "$#" -gt 0 ]]; do
       a=$1;
       echo -n ${a:1}= >> $configFile;
     else
-      if [ "$algo" == "" ]; then
+      if [ "$algo" == "autolykos2" ]; then
         echo $1 >> $configFile;
       else
         echo [$1] >> $configFile;
       fi
-      algo="";
+      algo="autolykos2";
     fi
   fi
   i=$((i+1));
